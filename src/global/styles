@@ -1,0 +1,9 @@
+export const theme = {
+    colors: {
+        primary: '#993399',
+        secondary: '#bc8ae1',
+        success: '',
+        error: '',
+        attention: '',
+    }
+}
