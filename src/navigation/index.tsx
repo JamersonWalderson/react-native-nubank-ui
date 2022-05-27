@@ -1,19 +1,19 @@
 import React from "react";
 import {  useAuth } from "../hooks/useAuth";
-import { SignedRoutes } from './signed.routes';
-import UnsignedRoutes from "./unsigned.routes";
 import Loading from '../screens/Loading';
+import Home from '../screens/Home';
+import { SafeAreaView } from "react-native";
 
 export const Router = () => {
-  const { signature, loading } = useAuth();
+  const { loading } = useAuth();
 
   if(loading) {
     return <Loading />
   }
 
   return (
-    signature 
-      ? <SignedRoutes />
-      : <UnsignedRoutes />
+    <SafeAreaView style={{flex: 1}}>
+      <Home />
+    </SafeAreaView>
   );
 }
