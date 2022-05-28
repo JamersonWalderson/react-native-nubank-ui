@@ -8,18 +8,20 @@ import {
   WelcomeMessage,
   Message,
   SectionAccount,
-  Account,
   Balance, 
   Title,
   Opened,
   ActionButton,
-  AccountOptionsMenu
+  AccountOptionsMenu,
+  MyCards,
  } from "./style";
 import Avatar from '../../components/Avatar';
 import HeaderOptionsButton from "../../components/HeaderOptionsButton";
 import { Text } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
 import ButtonRound from "../../components/ButtonRound";
+import { InformationalLabel } from "../../components/InformationalLabel";
+import Divider from '../../components/Divider';
 
 interface IUser {
   name: string;
@@ -33,15 +35,15 @@ const Home = () => {
   }
 
   const AccountButtonOptions = [
-    { id: 1, label: 'Pagar', icon: 'Área Pix' },
+    { id: 1, label: 'Pagar', icon: 'ambulance' },
     { id: 2, label: 'Pagar', icon: 'barcode' },
     { id: 3, label: 'Pegar\n Emprestado', icon: 'ambulance' },
-    { id: 4, label: 'Transferir', icon: 'deposite' },
-    { id: 5, label: 'Depositar', icon: 'deposite' },
-    { id: 6, label: 'Recarga de\n celular', icon: 'deposite' },
-    { id: 7, label: 'Cobrar', icon: 'deposite' },
-    { id: 8, label: 'Doação', icon: 'deposite' },
-    { id: 9, label: 'Transferir\n Internac.', icon: 'deposite' }
+    { id: 4, label: 'Transferir', icon: 'ambulance' },
+    { id: 5, label: 'Depositar', icon: 'ambulance' },
+    { id: 6, label: 'Recarga de\n celular', icon: 'ambulance' },
+    { id: 7, label: 'Cobrar', icon: 'ambulance' },
+    { id: 8, label: 'Doação', icon: 'ambulance' },
+    { id: 9, label: 'Transferir\n Internac.', icon: 'ambulance' }
   ];
 
   return(
@@ -67,7 +69,10 @@ const Home = () => {
               <Opened>R$ {user.sale}</Opened>
             </Balance>
             <ActionButton>
-              <Icon name='right' size={22} />
+              <Icon
+                name='right'
+                size={22}
+              />
             </ActionButton>
         </SectionAccount>
 
@@ -77,6 +82,15 @@ const Home = () => {
         >
           {AccountButtonOptions.map((item) => <ButtonRound icon={item.icon} key={item.id} label={item.label} />)}
         </AccountOptionsMenu>
+
+        <MyCards>
+          <InformationalLabel
+            icon={'credit-card'}
+            message={'Meus cartões'}
+          />
+        </MyCards>
+
+        <Divider />
 
       </Main>
     </Container>

@@ -72,3 +72,16 @@ export const AccountOptionsMenu = styled.ScrollView`
   margin-top: 5%;
 
 `
+
+export const MyCards = styled.View`
+  
+
+`
+
+export const Card = styled.TouchableOpacity`
+  background-color: ${theme.colors.light};
+`
+
+export const CardMessage = styled.Text`
+
+`
