@@ -50,6 +50,8 @@ export const Balance = styled.View`
 `
 export const Title = styled.Text`
   font-size: ${theme.size.title};
+  margin-bottom: 5%;
+  font-weight: bold;
 `
 
 export const Opened = styled.Text`
@@ -87,5 +89,44 @@ export const CardMessage = styled.Text`
 `
 
 export const ScrollInformations = styled.ScrollView`
+
+`
+export const SectionCreditCard = styled(SectionAccount)`
+  margin-top: 6%;
+`;
+
+export const Info = styled.View`
+
+`;
+
+export const SubTitle = styled.Text`
+
+`;
+
+export const CurrentInvoice = styled.Text`
+  font-size: ${theme.size.money};
+`;
+
+export const AvailableLimit = styled.Text`
+
+`;
+
+export const SectionWeBorrow = styled(SectionCreditCard)`
+
+`
+
+export const WeBorrowValue = styled(AvailableLimit)`
+
+`;
+
+export const SectionInvestiments = styled(WeBorrowValue)`
+
+`;
+
+export const Split = styled.TouchableOpacity`
+
+`
+
+export const Label = styled.TouchableOpacity`
 
 `

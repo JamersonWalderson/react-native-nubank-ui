@@ -15,25 +15,39 @@ import {
   AccountOptionsMenu,
   MyCards,
   ScrollInformations,
+  SectionCreditCard,
+  Info,
+  SubTitle,
+  CurrentInvoice,
+  AvailableLimit,
+  WeBorrowValue,
+  SectionWeBorrow,
+  SectionInvestiments,
  } from "./style";
 import Avatar from '../../components/Avatar';
 import HeaderOptionsButton from "../../components/HeaderOptionsButton";
-import { Text } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
 import ButtonRound from "../../components/ButtonRound";
 import { InformationalLabel } from "../../components/InformationalLabel";
 import Divider from '../../components/Divider';
 import { Advertisements } from "../../components/Advertisements";
+import { ButtonSmall } from "../../components/ButtonSmall";
 
 interface IUser {
   name: string;
   sale: string;
+  currentInvoice: string;
+  availableLimit: string;
+  weBorrowValue: string;
 }
 
 const Home = () => {
   const user: IUser = {
     name: 'Jamerson',
-    sale: '16.000'
+    sale: '16.000',
+    currentInvoice: '156.00',
+    availableLimit: '56.000',
+    weBorrowValue: '1.000.000'
   }
 
   const AccountButtonOptions = [
@@ -115,6 +129,53 @@ const Home = () => {
         </ScrollInformations>
 
         <Divider />
+
+        <SectionCreditCard>
+          <Info>
+            <Title>Cartão de crédito</Title>
+            <SubTitle>Fatura atual</SubTitle>
+            <CurrentInvoice>R$ { user.currentInvoice }</CurrentInvoice>
+            <AvailableLimit>Limite disponível: R$ {user.availableLimit }</AvailableLimit>
+            <ButtonSmall label={'Parcelar compras'}/>
+          </Info>
+          <ActionButton>
+              <Icon
+                name='right'
+                size={22}
+              />
+            </ActionButton>
+        </SectionCreditCard>
+
+        <Divider />
+
+        <SectionWeBorrow>
+          <Info>
+            <Title>Emprestimo</Title>
+            <SubTitle>Valor disponível de até</SubTitle>
+            <WeBorrowValue>R$ { user.weBorrowValue }</WeBorrowValue>
+          </Info>
+          <ActionButton>
+            <Icon
+              name='right'
+              size={22}
+            />
+          </ActionButton>
+        </SectionWeBorrow>
+
+        <Divider />
+
+        <SectionInvestiments>
+          <Info>
+            {/* <Title>Investimentos</Title> */}
+            <SubTitle>O jeito Nu de investir</SubTitle>
+          </Info>
+          <ActionButton>
+            <Icon
+              name='right'
+              size={22}
+            />
+          </ActionButton>
+        </SectionInvestiments>
 
       </Main>
     </Container>
