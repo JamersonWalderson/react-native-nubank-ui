@@ -14,6 +14,7 @@ import {
   ActionButton,
   AccountOptionsMenu,
   MyCards,
+  ScrollInformations,
  } from "./style";
 import Avatar from '../../components/Avatar';
 import HeaderOptionsButton from "../../components/HeaderOptionsButton";
@@ -22,6 +23,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import ButtonRound from "../../components/ButtonRound";
 import { InformationalLabel } from "../../components/InformationalLabel";
 import Divider from '../../components/Divider';
+import { Advertisements } from "../../components/Advertisements";
 
 interface IUser {
   name: string;
@@ -44,6 +46,15 @@ const Home = () => {
     { id: 7, label: 'Cobrar', icon: 'ambulance' },
     { id: 8, label: 'Doação', icon: 'ambulance' },
     { id: 9, label: 'Transferir\n Internac.', icon: 'ambulance' }
+  ];
+
+  const Informations = [
+    {id: 1, label: 'Seu informe de rendimentos\n 2021 já está pronto'},
+    {id: 2, label: 'Participe da promoção Tudo no\n Roxinho e concorra a prêmios'},
+    {id: 3, label: 'Chegou o débito automático da\n fatura do cartão'},
+    {id: 4, label: 'Conheça Nubank Vida: u,\n seguro simples e que cabe no...'},
+    {id: 5, label: 'Salve seus amigos da\n burocracia. Faça um convite...'},
+
   ];
 
   return(
@@ -80,7 +91,12 @@ const Home = () => {
           horizontal={true}
           contentContainerStyle={{paddingVertical: '5%'}}
         >
-          {AccountButtonOptions.map((item) => <ButtonRound icon={item.icon} key={item.id} label={item.label} />)}
+          {AccountButtonOptions.map((item) => (
+            <ButtonRound
+              icon={item.icon}
+              key={item.id}
+              label={item.label}
+            />))}
         </AccountOptionsMenu>
 
         <MyCards>
@@ -89,6 +105,14 @@ const Home = () => {
             message={'Meus cartões'}
           />
         </MyCards>
+
+        <ScrollInformations horizontal={true}>
+          {Informations.map((item) => (
+            <Advertisements 
+              message={item.label}
+              key={item.id}
+            />))}
+        </ScrollInformations>
 
         <Divider />
 

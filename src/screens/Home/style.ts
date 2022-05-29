@@ -85,3 +85,7 @@ export const Card = styled.TouchableOpacity`
 export const CardMessage = styled.Text`
 
 `
+
+export const ScrollInformations = styled.ScrollView`
+
+`
