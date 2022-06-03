@@ -51,15 +51,15 @@ const Home = () => {
   }
 
   const AccountButtonOptions = [
-    { id: 1, label: 'Pagar', icon: 'ambulance' },
+    { id: 1, label: 'Pix', icon: 'tablet-alt' },
     { id: 2, label: 'Pagar', icon: 'barcode' },
-    { id: 3, label: 'Pegar\n Emprestado', icon: 'ambulance' },
-    { id: 4, label: 'Transferir', icon: 'ambulance' },
-    { id: 5, label: 'Depositar', icon: 'ambulance' },
-    { id: 6, label: 'Recarga de\n celular', icon: 'ambulance' },
-    { id: 7, label: 'Cobrar', icon: 'ambulance' },
-    { id: 8, label: 'Doação', icon: 'ambulance' },
-    { id: 9, label: 'Transferir\n Internac.', icon: 'ambulance' }
+    { id: 3, label: 'Pegar\n Emprestado', icon: 'hand-holding-usd' },
+    { id: 4, label: 'Transferir', icon: 'money-bill-wave' },
+    { id: 5, label: 'Depositar', icon: 'money-bill-wave-alt' },
+    { id: 6, label: 'Recarga de\n celular', icon: 'mobile-alt' },
+    { id: 7, label: 'Cobrar', icon: 'money-bill-alt' },
+    { id: 8, label: 'Doação', icon: 'heart' },
+    { id: 9, label: 'Transferir\n Internac.', icon: 'globe' }
   ];
 
   const Informations = [
