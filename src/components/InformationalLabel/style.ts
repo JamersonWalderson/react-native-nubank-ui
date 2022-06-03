@@ -8,7 +8,7 @@ export const Container = styled.TouchableOpacity`
 export const Wrapper = styled.View`
   background-color: ${theme.colors.light};
   justify-content: flex-start;
-  padding: 5% 0% 5% 10%;
+  padding: 3% 3% 3% 10%;
   
   flex-direction: row;
   border-radius: 15px;
