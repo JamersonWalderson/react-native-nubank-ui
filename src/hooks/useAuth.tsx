@@ -1,4 +1,7 @@
-import React, { createContext, Dispatch, useContext, useEffect, useState } from 'react';
+import React, { 
+  createContext, 
+  useContext, 
+  useEffect, useState } from 'react';
 
 interface IAuth {
     signature: boolean;

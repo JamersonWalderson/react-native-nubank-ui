@@ -14,6 +14,7 @@ export const Main = styled.View`
     flex: 5;
     margin-left: 6%;
     margin-right: 6%;
+    margin-bottom: 6%;
 `
 export const Avatar = styled.View`
 
@@ -72,7 +73,6 @@ export const Account = styled.View`
   background-color: currentColor;
 `
 export const AccountOptionsMenu = styled.ScrollView`
-  /* background-color: royalblue; */
   margin-top: 5%;
 
 `

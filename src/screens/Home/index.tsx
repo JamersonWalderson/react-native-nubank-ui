@@ -144,7 +144,7 @@ const Home = () => {
 
         <SectionWeBorrow>
           <Info>
-            <Title>Emprestimo</Title>
+            <Title>Empréstimo</Title>
             <ActionButton>
               <Icon name='right'size={22} />
             </ActionButton>
@@ -157,13 +157,16 @@ const Home = () => {
 
         <SectionInvestiments>
           <Info>
-            <Title>Iasas</Title>
+            <Title>Investimentos</Title>
             <ActionButton>
               <Icon name='right' size={22} />
             </ActionButton>
           </Info>
           <SubTitle>O jeito Nu de investir: sem asteriscos, linguagem fácil e a partir de R$1. Saiba mais.</SubTitle>
-          <ButtonSmall label={'Consultar saldo para transferência'}/>
+          <InformationalLabel
+            icon={'money'}
+            message={'Consultar saldo para transferência'}
+          />
         </SectionInvestiments>
 
       </Main>

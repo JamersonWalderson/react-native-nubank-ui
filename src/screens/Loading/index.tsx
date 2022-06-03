@@ -1,5 +1,7 @@
 import React from "react";
-import { ActivityIndicator, Image, SafeAreaView, Text, View } from "react-native";
+import { 
+  Image, 
+  SafeAreaView, } from "react-native";
 import Logo from '../../assets/Nubank_Logo3x.png';
 import styles  from "./styles";
 
