@@ -91,14 +91,11 @@ const Home = () => {
         <SectionAccount activeOpacity={0.4}>
             <Balance>
               <Title>Conta</Title>
-              <Opened>R$ {user.sale}</Opened>
+              <ActionButton>
+                <Icon name='right' size={22} />
+              </ActionButton>
             </Balance>
-            <ActionButton>
-              <Icon
-                name='right'
-                size={22}
-              />
-            </ActionButton>
+            <Opened>R$ {user.sale}</Opened>
         </SectionAccount>
 
         <AccountOptionsMenu 
@@ -133,17 +130,14 @@ const Home = () => {
         <SectionCreditCard>
           <Info>
             <Title>Cartão de crédito</Title>
-            <SubTitle>Fatura atual</SubTitle>
-            <CurrentInvoice>R$ { user.currentInvoice }</CurrentInvoice>
-            <AvailableLimit>Limite disponível: R$ {user.availableLimit }</AvailableLimit>
-            <ButtonSmall label={'Parcelar compras'}/>
-          </Info>
-          <ActionButton>
-              <Icon
-                name='right'
-                size={22}
-              />
+            <ActionButton>
+              <Icon name='right' size={22} />
             </ActionButton>
+          </Info>
+          <SubTitle>Fatura atual</SubTitle>
+          <CurrentInvoice>R$ { user.currentInvoice }</CurrentInvoice>
+          <AvailableLimit>Limite disponível: R$ {user.availableLimit }</AvailableLimit>
+          <ButtonSmall label={'Parcelar compras'}/>
         </SectionCreditCard>
 
         <Divider />
@@ -151,30 +145,25 @@ const Home = () => {
         <SectionWeBorrow>
           <Info>
             <Title>Emprestimo</Title>
-            <SubTitle>Valor disponível de até</SubTitle>
-            <WeBorrowValue>R$ { user.weBorrowValue }</WeBorrowValue>
+            <ActionButton>
+              <Icon name='right'size={22} />
+            </ActionButton>
           </Info>
-          <ActionButton>
-            <Icon
-              name='right'
-              size={22}
-            />
-          </ActionButton>
+          <SubTitle>Valor disponível de até</SubTitle>
+          <WeBorrowValue>R$ { user.weBorrowValue }</WeBorrowValue>
         </SectionWeBorrow>
 
         <Divider />
 
         <SectionInvestiments>
           <Info>
-            {/* <Title>Investimentos</Title> */}
-            <SubTitle>O jeito Nu de investir</SubTitle>
+            <Title>Iasas</Title>
+            <ActionButton>
+              <Icon name='right' size={22} />
+            </ActionButton>
           </Info>
-          <ActionButton>
-            <Icon
-              name='right'
-              size={22}
-            />
-          </ActionButton>
+          <SubTitle>O jeito Nu de investir: sem asteriscos, linguagem fácil e a partir de R$1. Saiba mais.</SubTitle>
+          <ButtonSmall label={'Consultar saldo para transferência'}/>
         </SectionInvestiments>
 
       </Main>

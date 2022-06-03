@@ -42,16 +42,18 @@ export const Message = styled.Text`
 // Main
 export const SectionAccount = styled.TouchableOpacity`
   flex: 1;
-  flex-direction: row;
+  flex-direction: column;
 `
 export const Balance = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
   font-weight: bold;
-  width: 50%;
 `
 export const Title = styled.Text`
   font-size: ${theme.size.title};
   margin-bottom: 5%;
   font-weight: bold;
+  color: #000;
 `
 
 export const Opened = styled.Text`
@@ -96,7 +98,8 @@ export const SectionCreditCard = styled(SectionAccount)`
 `;
 
 export const Info = styled.View`
-
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const SubTitle = styled.Text`
@@ -119,8 +122,8 @@ export const WeBorrowValue = styled(AvailableLimit)`
 
 `;
 
-export const SectionInvestiments = styled(WeBorrowValue)`
-
+export const SectionInvestiments = styled(SectionAccount)`
+margin-top: 5%;
 `;
 
 export const Split = styled.TouchableOpacity`
@@ -130,3 +133,9 @@ export const Split = styled.TouchableOpacity`
 export const Label = styled.TouchableOpacity`
 
 `
+
+export const TitleSection = styled.Text`
+  font-size: ${theme.size.title};
+  margin-bottom: 5px;
+  font-weight: bold;
+`;
