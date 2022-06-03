@@ -3,10 +3,11 @@ import styled from 'styled-components/native';
 
 export const Wrapper = styled.TouchableOpacity`
   justify-content: center;
-  padding: 5% 5%;
+  padding: 3% 3%;
   border-radius: 100px;
   background-color: ${theme.colors.light};
   margin-top: 6%;
+  width: 60%;
   
 `;
 
