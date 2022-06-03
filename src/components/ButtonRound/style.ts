@@ -11,5 +11,10 @@ export const Container = styled.TouchableOpacity`
     margin-right: 10px;
 `;
 
+export const Wrapper = styled.View`
+    align-items: center;
+`
+
 export const Label = styled.Text`
+    text-align: center;
 `
